@@ -1,0 +1,12 @@
+// ========
+//  MIXINS
+// ========
+
+
+@mixin position($position, $top: null, $right: $top, $bottom: $top, $left: $right) {
+  @if $position != null { position: $position; }
+  @if $top      != null { top:      $top;      }
+  @if $right    != null { right:    $right;    }
+  @if $bottom   != null { bottom:   $bottom;   }
+  @if $left     != null { left:     $left;     }
+}

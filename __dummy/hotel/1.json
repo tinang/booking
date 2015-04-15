@@ -1,0 +1,40 @@
+{
+	"name": "Novotel",
+	"rooms": [
+		{
+			"roomName": "Meeting Room",
+			"roomPrice": "299",
+			"checkIn": "2015-04-30 08:00:00",
+			"checkOut": "2015-04-30 12:00:00",
+			"bookingType": "PERHOURS"
+		},
+		{
+			"roomName": "Garden View",
+			"roomPrice": "199",
+			"checkIn": "2015-04-20 00:00:00",
+			"checkOut": "2015-04-20 11:59:59",
+			"bookingType": "HALFDAY"
+		},
+		{
+			"roomName": "Sea View",
+			"roomPrice": "299",
+			"checkIn": null,
+			"checkOut": null,
+			"bookingType": "FULL"
+		},
+		{
+			"roomName": "Bungalow",
+			"roomPrice": "399",
+			"checkIn": null,
+			"checkOut": null,
+			"bookingType": "FULL"
+		},
+		{
+			"roomName": "President Room",
+			"roomPrice": "599",
+			"checkIn": null,
+			"checkOut": null,
+			"bookingType": "FULL"
+		}
+	]
+}
