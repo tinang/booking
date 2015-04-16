@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="bookingApp" class="no-js" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Booking</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Booking">
+
+    <link rel="stylesheet" href="components.css">
+
+    <script src="app.js"></script>
+    <script src="templates.js"></script>
+  </head>
+
+  <body>
+    
+    <div ng-show="loading" class="throbber">
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div ui-view></div>
+
+  </body>
+</html>
