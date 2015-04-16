@@ -10,7 +10,7 @@ function hotelService($http) {
     get: function(id) {
       return $http({
         method: "GET",
-        url: "__dummy/hotel/" + id + '.json'
+        url: "dummy/hotel/" + id + '.json'
       }).then(responseData);
     },
     update: function(hotel) {
