@@ -14,11 +14,7 @@ function hotelService($http) {
       }).then(responseData);
     },
     update: function(hotel) {
-      return $http({
-        method: "PUT",
-        url: "__dummy/hotel/" + hotel.id,
-        data: hotel
-      });
+      console.log('Updated hotel');
     }
   };
 }

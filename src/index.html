@@ -20,15 +20,12 @@
     <script src="templates.js"></script>
   </head>
 
-  <body class="{{currentState.data.class}}">
-    <!-- <div ng-controller="AlertDemoCtrl">
-      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-      <button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
-    </div> -->
+  <body>
+    
     <div ng-show="loading" class="throbber">
       <i class="fa fa-spinner fa-spin fa-5x"></i>
     </div>
-    
+
     <div ui-view></div>
 
   </body>
