@@ -1,0 +1,18 @@
+// local variables:
+$block: sidebar;
+
+.#{$block} {
+	@include border(1px solid #eee, right);
+	@include position(fixed, 50px, null, 0, 0);
+
+	background: color(#f5f5f5, 50);  
+  display: block;
+  overflow-x: hidden;
+  z-index: 1000;
+  padding-top: 20px;
+
+	#datePicker {
+		display: inline-block;
+		min-height: 290px;
+	}
+}

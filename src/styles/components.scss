@@ -16,10 +16,14 @@
 
   // vendor:
   "../bower_components/font-awesome/scss/font-awesome",
-  "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap",
+  "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap",
 
-  // ============================
+// ============================
 //  COMPONENTS
 // ============================
   
-  "components/loading"
+  "components/loading",
+  "components/sidebar",
+  "components/table",
+
+  "components/main"

@@ -1,10 +1,15 @@
 "use strict";
 
-var hotel = require("./service.js");
+require("../utilities/utilities.js");
 
-bookingHotelCtrl.$inject = ["$scope", "$stateParams", "hotel"];
-function bookingHotelCtrl($scope, $stateParams, hotel) {
+var hotel = require("./service.js");
+var sidebar = require("../components/sidebarCtrl.js");
+
+bookingHotelCtrl.$inject = ["$scope", "$stateParams", "helper", "hotel"];
+function bookingHotelCtrl($scope, $stateParams, helper, hotel) {
   $scope.hotel = hotel;
+  $scope.gridPeriod = helper.getGridPeriod();
+
   console.log(hotel);
 }
 

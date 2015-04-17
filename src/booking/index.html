@@ -1,12 +1,46 @@
-<div class="row">
-	<aside>
-		<div ng-controller="datePickerCtrl">
-			<div>
-				<datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
-			</div>
-		</div>
-	</aside>
-	<div id="wrapper-grid">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+		<a href="#" class="navbar-brand">Hotel {{ hotel.name }}</a>
+    <ul class="nav navbar-nav navbar-right">
+    	<li>
+    		<a href="#"><i class="fa fa-chevron-left fa-2x"></i></a>
+    	</li>
+    	<li>
+    		<a href="#"><i class="fa fa-chevron-right fa-2x"></i></a>
+    	</li>
+    </ul>
+  </div>
+</nav>
 
+<div class="container-fluid main">
+	<div class="row">
+		<aside class="col-md-2 sidebar" ng-include="'components/sidebar.html'">			
+		</aside>	
+	  <div id="wrapper-grid" class="col-md-10 col-md-offset-2">
+	  	<div>
+	  		<table class="booking table table-bordered">
+	  			<thead>
+	  				<tr>
+	  					<th>#</th>
+	  					<th ng-repeat="day in gridPeriod">{{ day.niceDate }}</th>
+	  				</tr>
+	  			</thead>
+	  			<tbody>
+	  				<tr ng-repeat="room in hotel.rooms">
+	  					<th>
+	  						{{ room.name }} <br>
+	  						${{ room.price }}
+	  					</th>
+	  					<td ng-repeat="day in gridPeriod">
+	  						<div ng-if="room.isChecked" class="event">
+
+	  						</div>
+	  					</td>
+	  				</tr>
+	  			</tbody>
+		  	</table>
+	  	</div>		  	
+	  </div>
 	</div>
 </div>
+	

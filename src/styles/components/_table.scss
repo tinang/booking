@@ -1,0 +1,13 @@
+$block: booking;
+
+table.#{$block} {
+	tr {
+		td {
+			height: 100px;
+			cursor: pointer;
+			&:hover {
+				background: rgba(91, 192, 222, 0.5);
+			}
+		}		
+	}
+}

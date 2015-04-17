@@ -18,7 +18,7 @@ function initLoader($rootScope) {
   });
 
   $rootScope.$on("$stateChangeSuccess", function(event, toState) {
-    $rootScope.loading      = false;
+    $rootScope.loading = false;
     $rootScope.currentState = toState;
   });
 
@@ -32,7 +32,7 @@ states.$inject = ["$stateProvider", "$urlRouterProvider", "$locationProvider"];
 function states($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
-  $urlRouterProvider.when("",  "/booking/1");	// assume that we are in specific hotel as default
+  $urlRouterProvider.when("",  "/booking/1");	// assume that we are in specific hotel with #ID is "1"
   $urlRouterProvider.when("/", "/booking/1");
 
   $stateProvider.state("booking", booking);

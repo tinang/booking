@@ -10,3 +10,13 @@
   @if $bottom   != null { bottom:   $bottom;   }
   @if $left     != null { left:     $left;     }
 }
+
+@mixin border($properties, $sides: null) {
+  @each $side in $sides {
+    @if      $side == null   { border:        $properties; }
+    @else if $side == top    { border-top:    $properties; }
+    @else if $side == right  { border-right:  $properties; }
+    @else if $side == bottom { border-bottom: $properties; }
+    @else if $side == left   { border-left:   $properties; }
+  }
+}

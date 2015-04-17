@@ -52,7 +52,7 @@ gulp.task("copy", function() {
 });
 
 gulp.task("dummy", function() {
-  return gulp.src(["__dummy/**"]).pipe(gulp.dest("dist/__dummy"));
+  return gulp.src(["dummy/**"]).pipe(gulp.dest("dist/dummy"));
 });
 
 var watching = false;
@@ -80,6 +80,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task("fonts", function () {
+  gulp.src(["src/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/**"]).pipe(gulp.dest("dist/fonts/bootstrap"));
   return gulp.src(["src/fonts/**"]).pipe(gulp.dest("dist/fonts"));
 });
 
