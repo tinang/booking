@@ -5,41 +5,55 @@
 			"id": "1",
 			"name": "Meeting Room",
 			"price": "299",
-			"checkIn": "2015-04-30 08:00:00",
-			"checkOut": "2015-04-30 12:00:00",
-			"bookingType": "PERHOURS"
+			"info": [
+				{
+					"id": "1",
+					"name": "Client 1",
+					"fromDate": "1430052322343",
+					"toDate": "1430225122343",
+					"bookingType": "event-hours"
+				}
+			]
 		},
 		{
 			"id": "2",
 			"name": "Garden View",
 			"price": "199",
-			"checkIn": "2015-04-20 00:00:00",
-			"checkOut": "2015-04-20 11:59:59",
-			"bookingType": "HALFDAY"
+			"info": null
 		},
 		{
 			"id": "3",
 			"name": "Sea View",
 			"price": "299",
-			"checkIn": null,
-			"checkOut": null,
-			"bookingType": "FULL"
+			"info": [
+				{
+					"id": "1",
+					"name": "Client 2",
+					"fromDate": "1429620322343",
+					"toDate": "1429706722343",
+					"bookingType": "event-half"
+				}
+			]
 		},
 		{
 			"id": "4",
 			"name": "Bungalow",
 			"price": "399",
-			"checkIn": null,
-			"checkOut": null,
-			"bookingType": "FULL"
+			"info": null
 		},
 		{
 			"id": "5",
 			"name": "President Room",
 			"price": "599",
-			"checkIn": null,
-			"checkOut": null,
-			"bookingType": "FULL"
+			"info": [
+				{
+					"id": "1",
+					"name": "Client 3",
+					"fromDate": "1429965922343",
+					"toDate": "1429965922343",
+					"bookingType": "event-full"
+				}
+			]
 		}
 	]
 }
