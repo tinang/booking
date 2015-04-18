@@ -1,13 +1,24 @@
 $block: booking;
+$color: #FF704D;
 
 table.#{$block} {
-	tr {
-		td {
-			height: 100px;
-			cursor: pointer;
-			&:hover {
-				background: rgba(91, 192, 222, 0.5);
-			}
-		}		
+	thead {
+		background: $color;
+		color: #fff;
 	}
+	tbody {
+		tr {
+			h5 {
+				color: $color;
+			}
+			td {
+				height: 100px;
+				cursor: pointer;				
+				&:hover {
+					background: rgba(248, 248, 248, 0.7);
+				}
+				padding: 0;
+			}		
+		}
+	}		
 }

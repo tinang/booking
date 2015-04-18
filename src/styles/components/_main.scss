@@ -2,6 +2,50 @@
 // Include all main sections
 // ============================
 
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .main {
-	padding-top: 70px;
+	color: #777;
+	padding-top: 60px;
+	position: relative;	
+}
+
+.bk-date {
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	.bk-event-wrapper {
+		position: absolute;
+		color: #fff;
+		border-radius: 2px;
+		padding: 0 5px;
+		&.bk-event-name {
+			font-weight: 500;
+		}
+		&.event-full {
+			background: rgba(90, 211, 222, 0.5);
+			&:hover {
+				background: rgb(90, 211, 222);
+			}
+		}
+		&.event-half {
+			background: rgba(79, 210, 166, 0.5);
+			&:hover {
+				background: rgb(79, 210, 166);
+			}
+		}
+		&.event-hours {
+			background: rgba(135, 214, 95, 0.5);
+			&:hover {
+				background: rgb(135, 214, 95);
+			}
+		}
+	}
 }

@@ -14,33 +14,61 @@
 
 <div class="container-fluid main">
 	<div class="row">
-		<aside class="col-md-2 sidebar" ng-include="'components/sidebar.html'">			
-		</aside>	
-	  <div id="wrapper-grid" class="col-md-10 col-md-offset-2">
-	  	<div>
+<!-- 		<aside class="col-md-2 sidebar" ng-include="'components/sidebar.html'">			
+		</aside> -->	
+	  <!-- <div id="wrapper-grid" class="col-md-10 col-md-offset-2"> -->
+	  	<div class="table-wrapper">
 	  		<table class="booking table table-bordered">
 	  			<thead>
 	  				<tr>
 	  					<th>#</th>
-	  					<th ng-repeat="day in gridPeriod">{{ day.niceDate }}</th>
+	  					<th ng-repeat="day in gridPeriod">{{ day.displayDate }}</th>
 	  				</tr>
 	  			</thead>
 	  			<tbody>
 	  				<tr ng-repeat="room in hotel.rooms">
-	  					<th>
-	  						{{ room.name }} <br>
-	  						${{ room.price }}
+	  					<th>	  						
+	  						<span class="title">{{ room.name }}</span>
+	  						<h5>${{ room.price }}</h5>
 	  					</th>
-	  					<td ng-repeat="day in gridPeriod">
-	  						<div ng-if="room.isChecked" class="event">
-
+	  					<td ng-repeat="(index, day) in gridPeriod" ng-click="showBookingForm(room.roomId, day.timestamp);">				
+	  						<div class="bk-date" style="position: relative;" ng-if="helper.compareDate(room.info[0].fromDate, day.timestamp)">
+	  							<a class="bk-event-wrapper {{room.info[0].bookingType}}" href="#" style="width: {{ helper.calDistance(room.info[0].fromDate, room.info[0].toDate)*100 }}%;">
+	  								<div class="bk-event">
+	  									<span class="bk-event-name">{{room.info[0].name}}</span><br>
+	  									<span class="bk-event-period">
+	  										{{ helper.formatDate(room.info[0].fromDate) }} - {{helper.formatDate(room.info[0].toDate)}}</span>
+	  								</div>
+	  							</a>
 	  						</div>
 	  					</td>
 	  				</tr>
 	  			</tbody>
 		  	</table>
-	  	</div>		  	
+	  	</div>
+	  <!-- </div> -->
+	</div>
+
+	<div class="pop-up" ng-show="flagForm">
+	  <div class="box">
+	    <a href="#" class="close-button" ng-click="flagForm = !flagForm;">&#10006;</a>
+	    <h3>Reservation</h3>
+	    <form class="form-horizontal">
+	      <div class="form-group">
+	        <label for="fromDate" class="col-sm-3 control-label">From Date</label>
+	        <div class="col-sm-9">
+	          <input type="date" class="form-control" id="fromDate">
+	        </div>
+	      </div>
+	      <div class="form-group">
+	        <label for="toDate" class="col-sm-3 control-label">End Date</label>
+	        <div class="col-sm-9">
+	          <input type="date" class="form-control" id="toDate">
+	        </div>
+	      </div>
+	    </form>    
 	  </div>
 	</div>
+
 </div>
 	

@@ -3,14 +3,18 @@
 require("../utilities/utilities.js");
 
 var hotel = require("./service.js");
-var sidebar = require("../components/sidebarCtrl.js");
 
 bookingHotelCtrl.$inject = ["$scope", "$stateParams", "helper", "hotel"];
 function bookingHotelCtrl($scope, $stateParams, helper, hotel) {
+  $scope.helper = helper;
+
   $scope.hotel = hotel;
   $scope.gridPeriod = helper.getGridPeriod();
+  $scope.flagForm = false;
 
-  console.log(hotel);
+  $scope.showBookingForm = function(roomId, timestamp) {
+    $scope.flagForm = true;
+  }
 }
 
 module.exports = {
