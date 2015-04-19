@@ -32,3 +32,9 @@
   -moz-box-shadow: $top $right $bottom $left rgba(0,0,0,0.1);
   box-shadow: $top $right $bottom $left rgba(0,0,0,0.1);
 }
+
+@mixin maxcontent() {
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: max-content;
+}

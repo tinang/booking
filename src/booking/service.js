@@ -14,7 +14,7 @@ function hotelService($http) {
       }).then(responseData);
     },
     update: function(hotel) {
-      console.log('Updated hotel');
+      return hotel;
     }
   };
 }

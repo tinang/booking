@@ -1,6 +1,9 @@
 // ============================
 // Include all main sections
 // ============================
+$eventFull: event-full;
+$eventHalf: event-half;
+$eventHours: event-hours;
 
 a {
 	text-decoration: none;
@@ -11,7 +14,7 @@ a {
 
 .main {
 	color: #777;
-	padding-top: 60px;
+	padding-top: 50px;
 	position: relative;	
 }
 
@@ -29,23 +32,40 @@ a {
 		&.bk-event-name {
 			font-weight: 500;
 		}
-		&.event-full {
-			background: rgba(90, 211, 222, 0.5);
+		&.#{$eventFull} {
+			background: rgba(90, 211, 222, 0.7);
 			&:hover {
 				background: rgb(90, 211, 222);
 			}
 		}
-		&.event-half {
-			background: rgba(79, 210, 166, 0.5);
+		&.#{$eventHalf} {
+			background: rgba(79, 148, 209, 0.7);
 			&:hover {
-				background: rgb(79, 210, 166);
+				background: rgb(79, 148, 209);
 			}
 		}
-		&.event-hours {
-			background: rgba(135, 214, 95, 0.5);
+		&.#{$eventHours} {
+			background: rgba(135, 214, 95, 0.7);
 			&:hover {
 				background: rgb(135, 214, 95);
 			}
 		}
 	}
+}
+
+.#{$eventFull} {
+	color: rgb(90, 211, 222);
+}
+.#{$eventHalf} {
+	color: rgb(79, 148, 209);
+}
+.#{$eventHours} {
+	color: rgb(135, 214, 95);
+}
+
+.alert {
+	@include maxcontent;
+  @include position(fixed, 0, auto, auto, 40%);
+  padding: 10px;
+  z-index: 9999;
 }
