@@ -1,4 +1,5 @@
 {
+	"id": 1,
 	"name": "Novotel",
 	"rooms": [
 		{
@@ -19,7 +20,7 @@
 			"id": "2",
 			"name": "Garden View",
 			"price": "199",
-			"info": null
+			"info": []
 		},
 		{
 			"id": "3",
@@ -32,6 +33,13 @@
 					"fromDate": "1429620322343",
 					"toDate": "1429706722343",
 					"bookingType": "event-half"
+				},
+				{
+					"id": "1",
+					"name": "Client 3",
+					"fromDate": "1429965922343",
+					"toDate": "1429965922343",
+					"bookingType": "event-hours"
 				}
 			]
 		},
@@ -39,7 +47,7 @@
 			"id": "4",
 			"name": "Bungalow",
 			"price": "399",
-			"info": null
+			"info": []
 		},
 		{
 			"id": "5",
@@ -48,7 +56,7 @@
 			"info": [
 				{
 					"id": "1",
-					"name": "Client 3",
+					"name": "Client 4",
 					"fromDate": "1429965922343",
 					"toDate": "1429965922343",
 					"bookingType": "event-full"
