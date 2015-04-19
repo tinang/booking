@@ -20,9 +20,71 @@
 
     <section class="main-content">
       <h1>
-<a id="booking" class="anchor" href="#booking" aria-hidden="true"><span class="octicon octicon-link"></span></a>booking</h1>
+<a id="reservation-app" class="anchor" href="#reservation-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reservation App</h1>
 
-<p>Just a basic booking</p>
+<p>Just a basic reservation app</p>
+
+<h2>
+<a id="deployment" class="anchor" href="#deployment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployment</h2>
+
+<pre><code>git clone git@github.com:tinang/booking.git
+npm install
+bower install
+gulp webpack
+gulp styles
+gulp templates
+gulp fonts
+gulp copy
+gulp dummy
+gulp serve
+
+</code></pre>
+
+<h2>
+<a id="production" class="anchor" href="#production" aria-hidden="true"><span class="octicon octicon-link"></span></a>Production?</h2>
+
+<p>Just copy <code>dist</code> folder to your root path</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>Check <a href="http://tinang.github.io/booking/demo/" title="Demo">here</a></p>
+
+<h2>
+<a id="more-detail" class="anchor" href="#more-detail" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Detail</h2>
+
+<ol>
+<li>Basic features
+
+<ul>
+<li>Render booking data</li>
+<li>Make a new reservation</li>
+<li><strong>Missing drag and drop</strong></li>
+</ul>
+</li>
+<li>What's inside?
+
+<ul>
+<li>
+<code>index.html</code> is main template file</li>
+<li>
+<code>app.js</code> is the main javascript file. <code>gulp webpack</code> will minimize all javascript files to <code>app.js</code> in "production"</li>
+<li>The same for <code>component.scss</code>, this file includes all needed css files and compile to <code>components.css</code> in "production"</li>
+<li>All templates (html file) will be compiled to <code>templates.js</code>
+</li>
+</ul>
+</li>
+<li>Planning for UI fine-grained booking
+
+<ul>
+<li>Currently I don't have any specific idea for this feature. In demo, I just set specific color for each booking type.</li>
+<li>Distance between <code>start-date</code> and <code>end-date</code> of a booking will be calculated by "day" unit, 1 day is 100% width of one column. We can use the same way for half-day (50% width) and per-hours <code>hours*100/24</code>% width</li>
+</ul>
+</li>
+<li>If you can not setup development, please contact me for more detail</li>
+</ol>
+
+<p>Have done! :)</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/tinang/booking">Booking</a> is maintained by <a href="https://github.com/tinang">tinang</a>.</span>
